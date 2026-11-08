@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "CAPA TradeIndia Raw Collector",
+  "version": "2.0.1",
+  "description": "General raw TradeIndia card extraction, multi-keyword projects, profile-ID deduplication and auditable Excel export. No product or business-role screening.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms"
+  ],
+  "optional_host_permissions": [
+    "https://www.tradeindia.com/*",
+    "https://tradeindia.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "CAPA TradeIndia",
+    "default_popup": "popup.html"
+  }
+}

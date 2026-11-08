@@ -1,0 +1,8 @@
+{
+  "name": "capa-tradeindia-raw-collector",
+  "version": "2.0.1",
+  "private": true,
+  "scripts": {
+    "test": "node tests/background.cjs"
+  }
+}

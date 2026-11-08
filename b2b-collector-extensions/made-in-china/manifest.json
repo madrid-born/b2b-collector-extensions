@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"CAPA Supplier Collector","version":"0.4.1","description":"Collect visible Made-in-China supplier results and export Excel locally.","permissions":["storage","scripting","tabs"],"host_permissions":["https://*.made-in-china.com/*"],"action":{"default_title":"Open Supplier Collector"},"background":{"service_worker":"background.js"}}

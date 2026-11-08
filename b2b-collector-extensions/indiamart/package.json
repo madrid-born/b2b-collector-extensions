@@ -1,0 +1,8 @@
+{
+  "name": "indiamart-supplier-research-suite",
+  "version": "1.2.2",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/smoke.test.cjs"
+  }
+}
