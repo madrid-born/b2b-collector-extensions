@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "CAPA TradeIndia Raw Collector",
-  "version": "2.0.1",
-  "description": "General raw TradeIndia card extraction, multi-keyword projects, profile-ID deduplication and auditable Excel export. No product or business-role screening.",
+  "name": "CAPA B2B Supplier Collector",
+  "version": "3.0.0",
+  "description": "Collect and export supplier listings from IndiaMART Export, Made-in-China, and TradeIndia.",
   "permissions": [
     "storage",
     "activeTab",
     "scripting",
-    "alarms"
+    "alarms",
+    "tabs",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://export.indiamart.com/*",
+    "https://*.made-in-china.com/*"
   ],
   "optional_host_permissions": [
     "https://www.tradeindia.com/*",
@@ -17,7 +23,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "CAPA TradeIndia",
+    "default_title": "CAPA B2B Supplier Collector",
     "default_popup": "popup.html"
   }
 }

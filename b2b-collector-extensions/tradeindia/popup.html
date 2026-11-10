@@ -1,5 +1,17 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>CAPA TradeIndia Raw Collector</title><link rel="stylesheet" href="popup.css"><body>
-<header><b>CAPA · TradeIndia</b><small>Raw search card collection · Version 2.0.1</small></header>
+<!doctype html><html lang="en"><meta charset="utf-8"><title>CAPA B2B Supplier Collector</title><link rel="stylesheet" href="popup.css"><body>
+<header><b>CAPA B2B Supplier Collector</b></header>
+<label for="marketplace">Marketplace</label>
+<select id="marketplace" disabled>
+ <option value="indiamart">IndiaMART Export</option>
+ <option value="made-in-china">Made-in-China</option>
+ <option value="tradeindia">TradeIndia</option>
+</select>
+<p id="launcher-status" role="status" hidden></p>
+<div id="dashboard-launcher" class="marketplace-panel" hidden>
+ <p id="dashboard-description"></p>
+ <button id="open-dashboard">Open dashboard</button>
+</div>
+<div id="tradeindia-panel" class="marketplace-panel" hidden>
 <select id="projects"></select><div class="buttons"><button id="new">New project</button><button id="delete">Delete project</button></div>
 <form id="form" hidden><label>Project name<input id="name" placeholder="e.g. CMC — TradeIndia"></label><label>First keyword<input id="keyword" dir="ltr" required placeholder="Site search keyword"></label><button type="submit">Create project</button><button type="button" id="cancel">Cancel</button></form>
 <section id="main"><label>Active keyword for this project<input id="active-keyword" dir="ltr" list="keyword-history"></label><datalist id="keyword-history"></datalist><button id="set-keyword">Set keyword</button><p class="hint">When a run finishes, set the next keyword here and search for it on TradeIndia. Results merge into the same project.</p>
@@ -8,4 +20,5 @@
 <p id="status" role="status"></p><div class="buttons"><button id="excel">Export raw Excel</button><button id="backup">JSON backup</button><button id="restore">Restore</button></div><input id="file" type="file" accept=".json" hidden>
 <div class="tabs"><button data-view="product">Product cards</button><button data-view="company-only">Company-only cards</button></div><div id="records"></div>
 <p class="hint">The Companies sheet contains raw profiles with observed titles and roles, including Manufacturer and Supplier. It retains unrelated products and flags company-only cards and ads with missing profile IDs. Review the exported data separately.</p></section>
-<script src="model.js"></script><script src="xlsx.js"></script><script src="popup.js"></script></body></html>
+</div>
+<script src="model.js"></script><script src="xlsx.js"></script><script src="popup.js"></script><script src="launcher.js"></script></body></html>
